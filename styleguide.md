@@ -21,12 +21,12 @@
 ## Variable and Function
 * Необходимо использовать `camelCase` для именования переменных и функций.
 
-**Bad**
+***Bad***
 ```ts
 var FooVar;
 function BarFunc() { }
 ```
-**Good**
+***Good***
 ```ts
 var fooVar;
 function barFunc() { }
@@ -35,24 +35,24 @@ function barFunc() { }
 ## Class
 * Используй `PascalCase` для имен классов.
 
-**Bad**
+***Bad***
 ```ts
 class foo { }
 ```
-**Good**
+***Good***
 ```ts
 class Foo { }
 ```
 * Используй `camelCase` для членов класса и методов.
 
-**Bad**
+***Bad***
 ```ts
 class Foo {
     Bar: number;
     Baz() { }
 }
 ```
-**Good**
+***Good***
 ```ts
 class Foo {
     bar: number;
@@ -69,17 +69,17 @@ class Foo {
 
 * По возможности используй постфикс `able`
 
-**Bad**
+***Bad***
 ```ts
 interface Foo {
 }
 ```
-**Good**
+***Good***
 ```ts
 interface IFoo {
 }
 ```
-**Good**
+***Good***
 ```ts
 interface IFooable {
 }
@@ -95,12 +95,12 @@ interface IFooable {
 
 * Используй `PascalCase` для именования.
 
-**Bad**
+***Bad***
 ```ts
 namespace foo {
 }
 ```
-**Good**
+***Good***
 ```ts
 namespace Foo {
 }
@@ -110,26 +110,26 @@ namespace Foo {
 
 * Используй `PascalCase` для именования.
 
-**Bad**
+***Bad***
 ```ts
 enum color {
 }
 ```
-**Good**
+***Good***
 ```ts
 enum Color {
 }
 ```
 * Используй `PascalCase` для члена перечисления.
 
-**Bad**
+***Bad***
 ```ts
 enum Color {
     blue,
     yellow,
 }
 ```
-**Good**
+***Good***
 ```ts
 enum Color {
     Blue,
@@ -141,13 +141,13 @@ enum Color {
 
 * По возможности лучше не использовать неопределенные значения.
 
-**Bad**
+***Bad***
 ```ts
-let foo = {x:123,y:undefined,};
+let foo = {x:12345,y:undefined,};
 ```
-**Good**
+***Good***
 ```ts
-let foo:{x:number,y?:number,} = {x:123};
+let foo:{x:number,y?:number,} = {x:12345};
 ```
 
 * Если используешь неопределенные значения то старайся возвращать `undefined` в большинстве случаев.
@@ -163,33 +163,33 @@ return undefined;
 
 * Используй`null` только тогда, когда это необходимо (например это предусмотрено API).
 
-**Bad**
+***Bad***
 ```ts
 callback(undefined)
 ```
-**Good**
+***Good***
 ```ts
 callback(null)
 ```
 
 * Используйте упрощенную проверку объектов которые могут быть `null` или `undefined`
 
-**Bad**
+***Bad***
 ```ts
 if (error === null)
 ```
-**Good**
+***Good***
 ```ts
 if (error)
 ```
 
 * Используйте `== undefined` / `!= undefined` (не `===` / `!==`) для проверки на `null` / `undefined`.  В случае если произойдет ситуация когда в переменной будет что-то вроде  `''`,`0`,`false`, `'undefined'` и т.д. все будет обработано корректно.
 
-**Bad**
+***Bad***
 ```ts
 if (error !== null)
 ```
-**Good**
+***Good***
 ```ts
 if (error != undefined)
 ```
@@ -202,14 +202,14 @@ if (error != undefined)
 
 * Всегда ставь запятые после каждого перечисления.
 
-**Bad**
+***Bad***
 ```ts
 const object = {
 	propertyOne: 1,
 	properyTwo: 'two'
 };
 ```
-**Good**
+***Good***
 ```ts
 const object = {
 	propertyOne: 1,
@@ -230,7 +230,7 @@ const object = {
 * Инициализируй массив с помощью аннотации вида `foos:Foo[]`, а не `foos:Array<Foo>`.
 
 ## Filename
-Имена файлов должны быть в  `camelCase`. Например `main.ts`, `myProvider.tsx`, `stringUtils.ts`, `mapReduce.ts` .
+Имена обычных файлов должны быть в  `camelCase`. Например, `main.ts`, `stringUtils.ts`, `mapReduce.ts`. Имена файлов классов должны быть в `PascalCase`. Например, `SPUserRepository.ts`, `SPUserProvider.ts`.
 
 ## type vs. interface
 
@@ -252,4 +252,3 @@ class Baz implements FooBar {
   bar: string;
 }
 ```
-* В остальном - делай все чтобы было круто :)
