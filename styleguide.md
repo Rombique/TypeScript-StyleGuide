@@ -230,7 +230,7 @@ const object = {
 * Инициализируй массив с помощью аннотации вида `foos:Foo[]`, а не `foos:Array<Foo>`.
 
 ## Filename
-Имена обычных файлов должны быть в  `camelCase`. Например, `main.ts`, `stringUtils.ts`, `mapReduce.ts`. Имена файлов классов должны быть в `PascalCase`. Например, `SPUserRepository.ts`, `SPUserProvider.ts`.
+* Имена обычных файлов должны быть в  `camelCase`. Например, `main.ts`, `stringUtils.ts`, `mapReduce.ts`. Имена файлов классов должны быть в `PascalCase`. Например, `SPUserRepository.ts`, `SPUserProvider.ts`.
 
 ## type vs. interface
 
